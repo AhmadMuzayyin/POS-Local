@@ -8,7 +8,6 @@ C:\Users\muzay\OneDrive\Documents\Visual Studio 2017\Projects\POS\POS\obj\Debug\
 C:\Users\muzay\OneDrive\Documents\Visual Studio 2017\Projects\POS\POS\obj\Debug\POS.csprojResolveAssemblyReference.cache
 C:\Users\muzay\OneDrive\documents\visual studio 2017\Projects\POS\POS\bin\Debug\Guna.UI.dll
 C:\Users\muzay\OneDrive\documents\visual studio 2017\Projects\POS\POS\bin\Debug\Guna.UI2.dll
-C:\Users\muzay\OneDrive\documents\visual studio 2017\Projects\POS\POS\obj\Debug\POS.CategoriesForm.resources
 C:\Users\muzay\OneDrive\documents\visual studio 2017\Projects\POS\POS\obj\Debug\POS.HomeForm.resources
 C:\Users\muzay\OneDrive\documents\visual studio 2017\Projects\POS\POS\obj\Debug\POS.LoginForm.resources
 C:\Users\muzay\OneDrive\documents\visual studio 2017\Projects\POS\POS\bin\Debug\MySql.Data.dll
@@ -24,3 +23,6 @@ C:\Users\muzay\OneDrive\documents\visual studio 2017\Projects\POS\POS\bin\Debug\
 C:\Users\muzay\OneDrive\documents\visual studio 2017\Projects\POS\POS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\muzay\OneDrive\documents\visual studio 2017\Projects\POS\POS\bin\Debug\MySql.Data.xml
 C:\Users\muzay\OneDrive\documents\visual studio 2017\Projects\POS\POS\obj\Debug\POS.AddCategory.resources
+C:\Users\muzay\OneDrive\documents\visual studio 2017\Projects\POS\POS\obj\Debug\POS.CategoryForm.resources
+C:\Users\muzay\OneDrive\documents\visual studio 2017\Projects\POS\POS\obj\Debug\POS.ProductForm.addProduct.resources
+C:\Users\muzay\OneDrive\documents\visual studio 2017\Projects\POS\POS\obj\Debug\POS.ProductForm.ProductForm.resources

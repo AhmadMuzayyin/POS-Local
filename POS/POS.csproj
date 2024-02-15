@@ -58,30 +58,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCategory.cs">
+    <Compile Include="CategoryForm\AddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCategory.Designer.cs">
+    <Compile Include="CategoryForm\AddCategory.Designer.cs">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="CategoriesForm.cs">
+    <Compile Include="CategoryForm\CategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CategoriesForm.Designer.cs">
-      <DependentUpon>CategoriesForm.cs</DependentUpon>
+    <Compile Include="CategoryForm\CategoryForm.Designer.cs">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Connection.cs" />
+    <Compile Include="Config\Connection.cs" />
     <Compile Include="HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="AuthForm\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="AuthForm\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductForm\addProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductForm\addProduct.Designer.cs">
+      <DependentUpon>addProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductForm\ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductForm\ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\Category.cs" />
     <Compile Include="Services\Code.cs" />
@@ -92,17 +104,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Suplier.cs" />
     <Compile Include="Services\User.cs" />
-    <EmbeddedResource Include="AddCategory.resx">
+    <EmbeddedResource Include="CategoryForm\AddCategory.resx">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CategoriesForm.resx">
-      <DependentUpon>CategoriesForm.cs</DependentUpon>
+    <EmbeddedResource Include="CategoryForm\CategoryForm.resx">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="AuthForm\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductForm\addProduct.resx">
+      <DependentUpon>addProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductForm\ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

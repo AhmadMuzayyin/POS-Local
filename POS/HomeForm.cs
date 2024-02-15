@@ -25,9 +25,9 @@ namespace POS
         }
         private void MenuCategory_Click(object sender, EventArgs e)
         {
-            var formCategory = new CategoriesForm();
+            CategoryForm formCategory = new CategoryForm();
             formCategory.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void Home_FormClosed(object sender, FormClosedEventArgs e)
@@ -44,10 +44,23 @@ namespace POS
         {
             if (e.KeyCode == Keys.F1)
             {
-                CategoriesForm fm = new CategoriesForm();
+                CategoryForm fm = new CategoryForm();
                 fm.Show();
                 this.Hide();
             }
+            if(e.KeyCode == Keys.F2)
+            {
+                ProductForm.ProductForm fm = new ProductForm.ProductForm();
+                fm.Show();
+                this.Hide();
+            }
+        }
+
+        private void gunaButton2_Click(object sender, EventArgs e)
+        {
+            ProductForm.ProductForm fm = new ProductForm.ProductForm();
+            fm.Show();
+            this.Hide();
         }
     }
 }

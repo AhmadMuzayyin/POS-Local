@@ -96,20 +96,30 @@ namespace POS.Services
         {
             try
             {
-                if(category.NAMA == "")
+                if(category.NAMA == "" || category.KODE == "")
                 {
-                    MessageBox.Show("Nama tidak boleh kososng");
+                    MessageBox.Show("Nama atau Kode tidak boleh kososng");
                 }
                 else
                 {
+
                     MySqlConnection conn = DB.GetConnection();
                     DB.openConnection();
                     MySqlCommand command = new MySqlCommand();
                     command.Connection = conn;
                     command.CommandType = CommandType.Text;
-                    command.CommandText = "UPDATE categories set name = @name WHERE id = @id";
-                    command.Parameters.AddWithValue("@id", param);
+                    if (category.KODE == param)
+                    {
+                        command.CommandText = "UPDATE categories SET name = @name, updated_at = @updated_at WHERE code = @param";
+                    }
+                    else
+                    {
+                        command.CommandText = "UPDATE categories SET code = @code, name = @name, updated_at = @updated_at WHERE code = @param";
+                    }
+                    command.Parameters.AddWithValue("@param", param);
+                    command.Parameters.AddWithValue("@code", category.code);
                     command.Parameters.AddWithValue("@name", category.NAMA);
+                    command.Parameters.AddWithValue("@updated_at", timestamps.updated_at);
                     command.Prepare();
                     command.ExecuteNonQuery();
                     DB.closeConnection();

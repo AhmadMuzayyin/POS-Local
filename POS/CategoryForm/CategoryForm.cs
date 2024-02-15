@@ -11,17 +11,32 @@ using POS.Services;
 
 namespace POS
 {
-    public partial class CategoriesForm : Form
+    public partial class CategoryForm : Form
     {
-        public CategoriesForm()
+        public CategoryForm()
         {
             InitializeComponent();
         }
-
+        private String ID, NAMA;
+        public void set_id(string id)
+        {
+            this.ID = id;
+        }
+        public void set_nama(string nama)
+        {
+            this.NAMA = nama;
+        }
         void view()
         {
-            Category Data = new Category();
-            CategoryGridView.DataSource = Data.getCategory();
+            try
+            {
+                Category Data = new Category();
+                CategoryGridView.DataSource = Data.getCategory();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
         private void Categories_Load(object sender, EventArgs e)
         {
@@ -66,11 +81,6 @@ namespace POS
         {
             view();
         }
-        private String ID;
-        public void set_id(string id)
-        {
-            this.ID = id;
-        }
         private void CategoryGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string param = CategoryGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -80,26 +90,55 @@ namespace POS
         {
             Category category = new Category();
             category.KODE = ID;
-            //MessageBox.Show(this.ID);
             category.Destroy(category);
             view();
         }
-        private void CategoryGridView_UserAddedRow(object sender, DataGridViewRowEventArgs e)
-        {
-            string param = CategoryGridView.CurrentCell.Value.ToString();
-            MessageBox.Show(param);
-        }
         private void CategoriesForm_KeyUp(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Escape)
             {
                 this.Close();
             }
-            if(e.KeyCode == Keys.F2)
+            if(e.KeyCode == Keys.F1)
             {
                 AddCategory fm = new AddCategory();
                 fm.FormClosed += FormTambahKategoriClosed;
                 fm.Show();
+            }
+            if (CategoryGridView.Focused)
+            {
+                if (CategoryGridView.SelectedCells.Count > 0)
+                {
+                    int rowIndex = CategoryGridView.SelectedCells[0].RowIndex;
+                    String kode = CategoryGridView.Rows[rowIndex].Cells[1].Value.ToString();
+                    set_id(kode);
+                }
+            }
+        }
+
+        private void CategoryGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if(e.ColumnIndex == 0)
+                {
+                    view();
+                }
+                else
+                {
+                    int rowIndex = CategoryGridView.SelectedCells[0].RowIndex;
+                    String kode = CategoryGridView.Rows[rowIndex].Cells[1].Value.ToString();
+                    String name = CategoryGridView.Rows[rowIndex].Cells[2].Value.ToString();
+                    Category category = new Category();
+                    category.KODE = kode;
+                    category.NAMA = name;
+                    category.Update(category, this.ID);
+                    view();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Gagal merubah data");
             }
         }
 

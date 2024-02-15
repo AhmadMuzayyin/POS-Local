@@ -42,6 +42,10 @@
             this.gunaButton7 = new Guna.UI.WinForms.GunaButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaButton8 = new Guna.UI.WinForms.GunaButton();
+            this.gunaButton9 = new Guna.UI.WinForms.GunaButton();
+            this.gunaButton10 = new Guna.UI.WinForms.GunaButton();
+            this.gunaButton11 = new Guna.UI.WinForms.GunaButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -101,7 +105,7 @@
             this.MenuCategory.ForeColor = System.Drawing.Color.White;
             this.MenuCategory.Image = ((System.Drawing.Image)(resources.GetObject("MenuCategory.Image")));
             this.MenuCategory.ImageSize = new System.Drawing.Size(20, 20);
-            this.MenuCategory.Location = new System.Drawing.Point(24, 114);
+            this.MenuCategory.Location = new System.Drawing.Point(60, 114);
             this.MenuCategory.Name = "MenuCategory";
             this.MenuCategory.OnHoverBaseColor = System.Drawing.Color.LightSeaGreen;
             this.MenuCategory.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -125,7 +129,7 @@
             this.gunaButton2.ForeColor = System.Drawing.Color.White;
             this.gunaButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton2.Image")));
             this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(224, 114);
+            this.gunaButton2.Location = new System.Drawing.Point(60, 226);
             this.gunaButton2.Name = "gunaButton2";
             this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.LightSeaGreen;
             this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -135,6 +139,7 @@
             this.gunaButton2.Size = new System.Drawing.Size(160, 71);
             this.gunaButton2.TabIndex = 7;
             this.gunaButton2.Text = "Produk (F2)";
+            this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click);
             // 
             // gunaButton3
             // 
@@ -148,7 +153,7 @@
             this.gunaButton3.ForeColor = System.Drawing.Color.White;
             this.gunaButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton3.Image")));
             this.gunaButton3.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton3.Location = new System.Drawing.Point(428, 114);
+            this.gunaButton3.Location = new System.Drawing.Point(60, 335);
             this.gunaButton3.Name = "gunaButton3";
             this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.LightSeaGreen;
             this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -171,7 +176,7 @@
             this.gunaButton4.ForeColor = System.Drawing.Color.White;
             this.gunaButton4.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton4.Image")));
             this.gunaButton4.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton4.Location = new System.Drawing.Point(636, 114);
+            this.gunaButton4.Location = new System.Drawing.Point(567, 114);
             this.gunaButton4.Name = "gunaButton4";
             this.gunaButton4.OnHoverBaseColor = System.Drawing.Color.LightSeaGreen;
             this.gunaButton4.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -194,7 +199,7 @@
             this.gunaButton5.ForeColor = System.Drawing.Color.White;
             this.gunaButton5.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton5.Image")));
             this.gunaButton5.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton5.Location = new System.Drawing.Point(840, 114);
+            this.gunaButton5.Location = new System.Drawing.Point(291, 114);
             this.gunaButton5.Name = "gunaButton5";
             this.gunaButton5.OnHoverBaseColor = System.Drawing.Color.LightSeaGreen;
             this.gunaButton5.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -217,7 +222,7 @@
             this.gunaButton1.ForeColor = System.Drawing.Color.White;
             this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(228, 246);
+            this.gunaButton1.Location = new System.Drawing.Point(291, 226);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.LightSeaGreen;
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -240,7 +245,7 @@
             this.gunaButton6.ForeColor = System.Drawing.Color.White;
             this.gunaButton6.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton6.Image")));
             this.gunaButton6.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton6.Location = new System.Drawing.Point(428, 246);
+            this.gunaButton6.Location = new System.Drawing.Point(291, 335);
             this.gunaButton6.Name = "gunaButton6";
             this.gunaButton6.OnHoverBaseColor = System.Drawing.Color.LightSeaGreen;
             this.gunaButton6.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -263,7 +268,7 @@
             this.gunaButton7.ForeColor = System.Drawing.Color.White;
             this.gunaButton7.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton7.Image")));
             this.gunaButton7.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton7.Location = new System.Drawing.Point(632, 246);
+            this.gunaButton7.Location = new System.Drawing.Point(567, 226);
             this.gunaButton7.Name = "gunaButton7";
             this.gunaButton7.OnHoverBaseColor = System.Drawing.Color.LightSeaGreen;
             this.gunaButton7.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -294,12 +299,108 @@
             this.gunaLabel2.Text = "SELAMAT DATANG DI KOPERASI AL-IBROHIMY";
             this.gunaLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // gunaButton8
+            // 
+            this.gunaButton8.AnimationHoverSpeed = 0.07F;
+            this.gunaButton8.AnimationSpeed = 0.03F;
+            this.gunaButton8.BaseColor = System.Drawing.Color.Turquoise;
+            this.gunaButton8.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton8.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton8.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton8.ForeColor = System.Drawing.Color.White;
+            this.gunaButton8.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton8.Image")));
+            this.gunaButton8.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton8.Location = new System.Drawing.Point(567, 335);
+            this.gunaButton8.Name = "gunaButton8";
+            this.gunaButton8.OnHoverBaseColor = System.Drawing.Color.LightSeaGreen;
+            this.gunaButton8.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton8.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton8.OnHoverImage = null;
+            this.gunaButton8.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton8.Size = new System.Drawing.Size(160, 71);
+            this.gunaButton8.TabIndex = 14;
+            this.gunaButton8.Text = "Pengguna (F9)";
+            // 
+            // gunaButton9
+            // 
+            this.gunaButton9.AnimationHoverSpeed = 0.07F;
+            this.gunaButton9.AnimationSpeed = 0.03F;
+            this.gunaButton9.BaseColor = System.Drawing.Color.Turquoise;
+            this.gunaButton9.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton9.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton9.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton9.ForeColor = System.Drawing.Color.White;
+            this.gunaButton9.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton9.Image")));
+            this.gunaButton9.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton9.Location = new System.Drawing.Point(796, 114);
+            this.gunaButton9.Name = "gunaButton9";
+            this.gunaButton9.OnHoverBaseColor = System.Drawing.Color.LightSeaGreen;
+            this.gunaButton9.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton9.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton9.OnHoverImage = null;
+            this.gunaButton9.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton9.Size = new System.Drawing.Size(167, 71);
+            this.gunaButton9.TabIndex = 15;
+            this.gunaButton9.Text = "Pengguna (F10)";
+            // 
+            // gunaButton10
+            // 
+            this.gunaButton10.AnimationHoverSpeed = 0.07F;
+            this.gunaButton10.AnimationSpeed = 0.03F;
+            this.gunaButton10.BaseColor = System.Drawing.Color.Turquoise;
+            this.gunaButton10.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton10.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton10.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton10.ForeColor = System.Drawing.Color.White;
+            this.gunaButton10.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton10.Image")));
+            this.gunaButton10.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton10.Location = new System.Drawing.Point(796, 226);
+            this.gunaButton10.Name = "gunaButton10";
+            this.gunaButton10.OnHoverBaseColor = System.Drawing.Color.LightSeaGreen;
+            this.gunaButton10.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton10.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton10.OnHoverImage = null;
+            this.gunaButton10.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton10.Size = new System.Drawing.Size(167, 71);
+            this.gunaButton10.TabIndex = 16;
+            this.gunaButton10.Text = "Pengguna (F11)";
+            // 
+            // gunaButton11
+            // 
+            this.gunaButton11.AnimationHoverSpeed = 0.07F;
+            this.gunaButton11.AnimationSpeed = 0.03F;
+            this.gunaButton11.BaseColor = System.Drawing.Color.Turquoise;
+            this.gunaButton11.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton11.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton11.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton11.ForeColor = System.Drawing.Color.White;
+            this.gunaButton11.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton11.Image")));
+            this.gunaButton11.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton11.Location = new System.Drawing.Point(796, 335);
+            this.gunaButton11.Name = "gunaButton11";
+            this.gunaButton11.OnHoverBaseColor = System.Drawing.Color.LightSeaGreen;
+            this.gunaButton11.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton11.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton11.OnHoverImage = null;
+            this.gunaButton11.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton11.Size = new System.Drawing.Size(167, 71);
+            this.gunaButton11.TabIndex = 17;
+            this.gunaButton11.Text = "Pengguna (F12)";
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1028, 505);
+            this.Controls.Add(this.gunaButton11);
+            this.Controls.Add(this.gunaButton10);
+            this.Controls.Add(this.gunaButton9);
+            this.Controls.Add(this.gunaButton8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.gunaButton7);
             this.Controls.Add(this.gunaButton6);
@@ -342,5 +443,9 @@
         private Guna.UI.WinForms.GunaButton gunaButton7;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private Guna.UI.WinForms.GunaButton gunaButton8;
+        private Guna.UI.WinForms.GunaButton gunaButton9;
+        private Guna.UI.WinForms.GunaButton gunaButton10;
+        private Guna.UI.WinForms.GunaButton gunaButton11;
     }
 }
